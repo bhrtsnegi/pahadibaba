@@ -38,7 +38,7 @@ const Homepage = () => {
         <p className='text-white text-xl font-medium mt-4'>Helps you to develop websites according to your niche requirement and business needs.</p>
         </div>
       {/* Left Div */}
-        <div className='flex-1 sm: hidden'>
+        <div className='flex-1 hidden sm:block'>
           <div
             className="bg-[#202634] text-lg text-white font-bold m-24 p-6 border-none rounded-lg"
           >
