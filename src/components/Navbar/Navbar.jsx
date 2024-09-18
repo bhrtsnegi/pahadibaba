@@ -3,7 +3,7 @@ import { FaGhost } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-transparent py-4 px-8 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 right-0 bg-transparent py-4 px-8 mx-12 flex justify-between items-center">
       {/* Logo Section */}
       <div className="flex items-center">
         <FaGhost className="text-white text-3xl mr-2" />
