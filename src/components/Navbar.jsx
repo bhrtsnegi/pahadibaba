@@ -23,7 +23,7 @@ const Navbar = () => {
       </button>
 
       {/* Nav Links */}
-      <ul className={`md:flex md:space-x-2 mt-4 p-4 px-4 border border-[#5a5a9f] rounded-full border-gray-500 ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
+      <ul className={`md:flex md:space-x-2 mt-4 p-4 px-4 border rounded-full border-gray-500 ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
         <li className="transform hover:scale-110 transition-transform duration-300">
           <Link to="/" className="text-white font-bold text-xl px-4 py-2 border border-transparent hover:text-purple-500">Home</Link>
         </li>

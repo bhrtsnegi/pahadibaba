@@ -31,14 +31,14 @@ const Homepage = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Right Div */}
-        <div className='relative mx-12 flex-1'>
+        <div className='relative mx-12 flex-1 sm:text-lg'>
         <p className='text-purple-500 text-4xl font-bold'>Design - Develop - Deploy </p>
         <span className="text-white text-8xl font-bold">Now Make Your Business More </span>
         <span className='text-purple-500 text-8xl font-extrabold'>{textArray[currentIndex]}.</span>
         <p className='text-white text-xl font-medium mt-4'>Helps you to develop websites according to your niche requirement and business needs.</p>
         </div>
       {/* Left Div */}
-        <div className='flex-1'>
+        <div className='flex-1 sm: hidden'>
           <div
             className="bg-[#202634] text-lg text-white font-bold m-24 p-6 border-none rounded-lg"
           >
