@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar';
 import './index.css';
-import Homepage from './components/Homepage';
-import Service from './components/Service';
-import Pages from './components/Pages';
-import Pricing from './components/Pricing';
+import Homepage from './pages/Homepage';
+import Service from './pages/Service';
+import Pages from './pages/Pages';
+import Pricing from './pages/Pricing';
 
 function App() {
   return (
