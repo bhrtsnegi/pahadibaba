@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
-import { FaGhost } from 'react-icons/fa';
+import { FaGhost, FaBars, FaTimes } from 'react-icons/fa';
+import Button from '../Button';
+import { useState } from 'react'; // Import useState for toggling mobile menu
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-transparent py-4 px-8 mx-12 flex justify-between items-center">
       {/* Logo Section */}
@@ -10,8 +14,16 @@ const Navbar = () => {
         <span className="text-white text-xl font-bold">Pahadi Baba</span>
       </div>
 
+      {/* Mobile Menu Toggle */}
+      <button
+        className="block md:hidden text-white"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        {isMenuOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
+      </button>
+
       {/* Nav Links */}
-      <ul className="flex space-x-2 p-2 px-4 border border-[#5a5a9f] rounded-full border-gray-500">
+      <ul className={`md:flex md:space-x-2 p-2 px-4 border border-[#5a5a9f] rounded-full border-gray-500 ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
         <li className="transform hover:scale-110 transition-transform duration-300">
           <Link to="/" className="text-white font-bold px-4 py-2 border border-transparent hover:text-purple-500">Home</Link>
         </li>
@@ -27,13 +39,13 @@ const Navbar = () => {
       </ul>
 
       {/* Profile and Button */}
-      <div className="flex items-center space-x-4">
+      <div className="hidden md:flex items-center space-x-4">
         <img
           src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png"
           alt="Profile"
           className="w-8 h-8 rounded-full"
         />
-        <button className="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600">Get In</button>
+        <Button />
       </div>
     </nav>
   );

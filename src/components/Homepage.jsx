@@ -10,10 +10,10 @@ const Homepage = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
         <div className='relative mx-8'>
-        <p className='text-white text-xl font-bold'>Design - Develop - Deploy </p>
+        <p className='text-white text-4xl font-bold'>Design - Develop - Deploy </p>
         <h1 className="text-white text-8xl font-bold">Create a Website Without {headline}</h1>
+        <Button/>
         </div>
-        
     </div>
   )
 }
