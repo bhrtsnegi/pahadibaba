@@ -61,7 +61,7 @@ const LoginScreen = ({ onLogin })  => {
                     </div>
 
                 {/* Right Side - Login Form */}
-                <div className="w-full lg:w-1/2 m-2 lg:p-12 lg:ml-24 bg-[#060d15] border rounded-md border-gray-700">
+                <div className="w-full lg:w-1/2 m-2 lg:p-12 lg:ml-24 bg-[#060d15] border rounded-md border-gray-700 hover:animate-shake">
                     <h2 className="text-3xl text-left font-bold mb-6">Sign in</h2>
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
