@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FaCog, FaWrench, FaThumbsUp, FaMagic } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { FaLinkedin } from 'react-icons/fa';
+import { Link } from 'react-router-dom'; // <-- Import Link
 
 const LoginScreen = ({ onLogin })  => {
     const [email, setEmail] = useState('');
@@ -15,50 +16,49 @@ const LoginScreen = ({ onLogin })  => {
         onLogin();
     };
 
-
     return (
         <div className="min-h-screen flex items-center justify-evenly bg-[#070f19] text-white">
             <div className="flex w-full max-w-5xl rounded-lg overflow-hidden shadow-lg">
                 {/* Left Side - Features */}
-                    <div className="flex flex-col pt-24 space-y-8">
-                        <div className="text-3xl font-bold text-blue-400">Mester</div>
-                        <div className="flex items-start space-x-4">
-                            <FaCog className="text-2xl text-gray-300" />
-                            <div>
-                                <h3 className="text-lg font-semibold">Excellent Designs</h3>
-                                <p className="text-sm text-gray-400">
-                                    Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex items-start space-x-4">
-                            <FaWrench className="text-2xl text-gray-300" />
-                            <div>
-                                <h3 className="text-lg font-semibold">Built to last</h3>
-                                <p className="text-sm text-gray-400">
-                                    Experience unmatched durability that goes above and beyond with lasting investment.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex items-start space-x-4">
-                            <FaThumbsUp className="text-2xl text-gray-300" />
-                            <div>
-                                <h3 className="text-lg font-semibold">Great user experience</h3>
-                                <p className="text-sm text-gray-400">
-                                    Integrate our product into your routine with an intuitive and easy-to-use interface.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex items-start space-x-4">
-                            <FaMagic className="text-2xl text-gray-300" />
-                            <div>
-                                <h3 className="text-lg font-semibold">Innovative functionality</h3>
-                                <p className="text-sm text-gray-400">
-                                    Stay ahead with features that set new standards, addressing your evolving needs better than the rest.
-                                </p>
-                            </div>
+                <div className="flex flex-col pt-24 space-y-8">
+                    <div className="text-3xl font-bold text-blue-400">Mester</div>
+                    <div className="flex items-start space-x-4">
+                        <FaCog className="text-2xl text-gray-300" />
+                        <div>
+                            <h3 className="text-lg font-semibold">Excellent Designs</h3>
+                            <p className="text-sm text-gray-400">
+                                Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.
+                            </p>
                         </div>
                     </div>
+                    <div className="flex items-start space-x-4">
+                        <FaWrench className="text-2xl text-gray-300" />
+                        <div>
+                            <h3 className="text-lg font-semibold">Built to last</h3>
+                            <p className="text-sm text-gray-400">
+                                Experience unmatched durability that goes above and beyond with lasting investment.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                        <FaThumbsUp className="text-2xl text-gray-300" />
+                        <div>
+                            <h3 className="text-lg font-semibold">Great user experience</h3>
+                            <p className="text-sm text-gray-400">
+                                Integrate our product into your routine with an intuitive and easy-to-use interface.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                        <FaMagic className="text-2xl text-gray-300" />
+                        <div>
+                            <h3 className="text-lg font-semibold">Innovative functionality</h3>
+                            <p className="text-sm text-gray-400">
+                                Stay ahead with features that set new standards, addressing your evolving needs better than the rest.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
                 {/* Right Side - Login Form */}
                 <div className="w-full lg:w-1/2 m-2 lg:p-12 lg:ml-24 bg-[#060d15] border rounded-md border-gray-700 hover:animate-shake">
@@ -107,7 +107,7 @@ const LoginScreen = ({ onLogin })  => {
                         </button>
                     </form>
                     <div className="mt-6 text-center text-sm">
-                        Don't have an account? <a href="#" className="text-blue-400 hover:underline">Sign up</a>
+                        Don't have an account? <Link to="/signup" className="text-blue-400 hover:underline">Sign up</Link>
                     </div>
                     <div className="mt-4 text-center text-sm">or</div>
                     <div className="mt-4 flex-row">
@@ -122,6 +122,6 @@ const LoginScreen = ({ onLogin })  => {
             </div>
         </div>
     );
-}
+};
 
 export default LoginScreen;
